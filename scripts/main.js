@@ -1,4 +1,4 @@
-(function(){
+
 var signUp= helpers.id("signup");
 var login= helpers.id("login");
 var splashDiv = helpers.id("splash");
@@ -19,4 +19,3 @@ signUp.onclick = signUpClick;
 login.onclick = loginClick;
 
 
-}());
