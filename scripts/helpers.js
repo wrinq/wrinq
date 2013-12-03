@@ -9,6 +9,9 @@ var helpers = {
 
     hide : function(element){
 	element.style.display = "none";
+    },
+    clearHtml :function(element){
+	element.innerHTML = '';
     }
 
 };
