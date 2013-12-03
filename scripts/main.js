@@ -1,14 +1,22 @@
+(function(){
 var signUp= helpers.id("signup");
 var login= helpers.id("login");
 var splashDiv = helpers.id("splash");
 var formDiv = helpers.id("formDiv");
 
-signUp.onclick = function(){
+var signUpClick = function(){
 helpers.hide(splashDiv);
 formDiv.innerHTML = domElements.signUpForm;
 };
 
-login.onclick = function(){
+var loginClick = function(){
 helpers.hide(splashDiv);
 formDiv.innerHTML= domElements.loginForm;
 };
+
+signUp.onclick = signUpClick;
+
+login.onclick = loginClick;
+
+
+}());
