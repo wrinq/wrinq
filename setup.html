@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>set up instructions</title>
+	 <link href="styles/style.css" rel="stylesheet"/>
+         <style>
+	   a{
+	   color:#08c;
+	   }
+         </style>
+    </head>
+    <body style="background-color:white;color:black;">
+      <h1>Setting up wrinq</h1>
+      <ol>
+        <li>Download and install <a href="http://redis.io/download">redis</a>,<a href="http://www.erlang.org/download.html">erlang</a> and <a href="http://nginx.org/en/download.html">nginx</a></li>
+	<li>Start redis and nginx.</li>
+        <li>clone <a href="https://github.com/brickcap/wrinq-core" style="color:#08c;">wrinq-core</a></li>
+        <li>cd to clone location and then type rebar get-deps compile followed by relx in terminal</li>
+        <li>navigate to _rel folder and type bin/wrinq console. The application should start</li>
+        <li>clone <a href="https://github.com/brickcap/wrinq-front-end" style="color:#08c;">wrinq-front end</a></li>
+        <li>Use the nginx.conf supplied in the repository. Edit the root directive to point to the location where you cloned wrinq-front-end. Reload (nginx -s reload) nginx</li>
+        <li>Point your browser to <a href="http://localhost:3000">localhost:3000</a></li>
+        <li>The application should start now. And you should see something like the image below.</li>
+      </ol>
+      <img src="http://farm3.staticflickr.com/2856/12033703035_d31e095340_o.png">
+      You might want to check <a href ="/data.html">some features of wrinq</a>      
+   </body>
+</html>
