@@ -1,6 +1,6 @@
 $("#preview").click(function(e){
     var validation = $("#preview_validation");
-    validation.text("");
+    validation.html("");
     
     var name = $("#name_tenant").val();
     var email = $("#email_tenant").val();
