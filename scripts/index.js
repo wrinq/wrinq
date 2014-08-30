@@ -11,5 +11,8 @@ $("#preview").click(function(e){
     if(!name||!rent){
 	validation.text("It is important that you fill in the name and email fields for preview to work");
     }
+    if(name&&rent){
+	//analyze this
+    }
 
 });

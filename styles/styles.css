@@ -359,7 +359,7 @@ input:text:{
     margin-left:2%;
 }
 
-input[type=text]{
+input[type=text],input[type=email]{
     padding:2%;
 }
 
