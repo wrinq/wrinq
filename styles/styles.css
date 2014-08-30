@@ -330,6 +330,15 @@ input:text:{
     text-decoration:none;
 }
 
+.button-regular{
+    padding:10px;
+    background-color:#08c;
+    color:white;
+    cursor:pointer;
+    text-decoration:none;
+
+}
+
 .pain{
     background-color:whitesmoke;
     padding:4px;
