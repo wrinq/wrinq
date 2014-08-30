@@ -43,12 +43,12 @@
       <h1  class="center-responsive">Or try it out right here</h1>
       <div class="col-1-2">
 	
-	<p><label for="">Name of your tenant (Required)</label></p>
-	<p><input type="text" name="" value="" placeholder="Jhonny"/></p>
-	<p><label for="">Rent to collect (Required)</label></p>
-	<p> <input type="text" name="" value="" placeholder="$1250"/></p>
-	<p><label for="">Email of your tenant</label></p>
-	<p><input type="text" name="" value="" placeholder="jhonny@example.com"/></p>
+	<p><label for="name">Name of your tenant (Required)</label></p>
+	<p><input type="text" name="name" id="name" value="" placeholder="Johnny"/></p>
+	<p><label for="rent">Rent to collect (Required)</label></p>
+	<p> <input type="text" id="rent" name="actual_rent" value="" placeholder="$1250"/></p>
+	<p><label for="email_tenant">Email of your tenant</label></p>
+	<p><input type="text" name="" value="" id="email_tenant" placeholder="johnny@example.com"/></p>
 	<p>
 	  [Try changing the name/email/recurring-rent fields
 	  in the form above and see what happens]
@@ -64,7 +64,7 @@
 	  </p>
 	  <p>
 	    Your rent for the month of X is <span class="var">$1250</span>. You can   
-	    <span class="payment" title="Tenant will be taken to paypal to pay the rent"> 
+	    <span class="payment" title=" On clicking, Johnny will be taken to paypal to pay the rent"> 
 	      pay it online</span> conveniently in just two minutes. As always 
 	    let me know if you need anything. Enjoy your stay.
 	  </p>
@@ -73,8 +73,8 @@
 	  </p>
 	  <p>Your very happy landlord.</p>         
 	</div>
-	 <p>[Demo of the emaill that will be sent to  <span class="var">jhonny@example.com</span> if you decide 
-	    to use wrinq]</p>
+	 <p>[ Demo of the emaill that will be sent to  <span class="var">johnny@example.com</span> only if you decide 
+	    to use wrinq. Of course you will also have the <strong>option to use a custom message </strong>]</p>
       </div>
     </div> 
     <hr/>
