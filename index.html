@@ -42,13 +42,15 @@
     <div class="grid grid-pad">     
       <h1  class="center-responsive">Or try it out right here</h1>
       <div class="col-1-2">
-	
-	<p><label for="name_tenant">Name of your tenant (Required)</label></p>
-	<p><input type="text" name="name" id="name_tenant" value="" placeholder="Johnny" required/></p>
-	<p><label for="rent_tenant">Rent to collect (Required)</label></p>
-	<p> <input type="text" id="rent_tenant" name="actual_rent" value="" placeholder="$1250" required/></p>
-	<p><label for="email_tenant">Email of your tenant</label></p>
-	<p><input type="email" name="" value="" id="email_tenant" placeholder="johnny@example.com"/></p>
+	<form id="preview_form">
+	  
+	  <p><label for="name_tenant">Name of your tenant (Required)</label></p>
+	  <p><input type="text" name="name" id="name_tenant" value="" placeholder="Johnny" required/></p>
+	  <p><label for="rent_tenant">Rent to collect (Required)</label></p>
+	  <p> <input type="text" id="rent_tenant" name="actual_rent" value="" placeholder="$1250" required/></p>
+	  <p><label for="email_tenant">Email of your tenant</label></p>
+	  <p><input type="email" name="" value="" id="email_tenant" placeholder="johnny@example.com"/></p>
+	</form>
 	<p>
 	  [Try changing the name/rent/email fields
 	  in the form above and click on preview to see what happens]
@@ -75,8 +77,8 @@
 	  </p>
 	  <p>Your very happy landlord.</p>         
 	</div>
-	 <p>[ Demo of the emaill that will be sent to  <span class="var" id="var_email">johnny@example.com</span> only if you decide 
-	    to use wrinq. Of course you will also have the <strong>option to use a custom message </strong>]</p>
+	<p>[ Demo of the emaill that will be sent to  <span class="var" id="var_email">johnny@example.com</span> only if you decide 
+	  to use wrinq. Of course you will also have the <strong>option to use a custom message </strong>]</p>
       </div>
     </div> 
     <hr/>
@@ -142,7 +144,7 @@
 	  to help us fix the issues and polish it to a mirror shine before we launch. 
 	  Please join the mailing list if you would like to be notified when wrinq launches.]  </p>
 
-	<form  class="email-form">
+	<form  class="email-form" id="email_form">
           <p><label for="">Email</label></p>
 	  <p> <input type="text" name="" value="" placeholder="To send you notification" required/></p>
 	  <p><label for="">Rent</label></p>
