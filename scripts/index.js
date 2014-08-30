@@ -1,18 +1,31 @@
 $("#preview").click(function(e){
     var validation = $("#preview_validation");
     validation.text("");
+    
     var name = $("#name_tenant").val();
     var email = $("#email_tenant").val();
     var rent =$("#rent_tenant").val();
+    var int_rent = parseInt(rent.replace(/[^0-9]/gi, ''),10);
+    var valid_rent = isNaN(int_rent)?false:rent;
+    var valid_email= email? validateEmail(email):false;
     if(name) $("#var_name").text(name);
-    if(email) $("#var_email").text(email);
-    if(rent) $("#var_rent").text(rent);
+    if(valid_email) $("#var_email").text(email);
+    if(valid_rent) $("#var_rent").text(valid_rent);    
+    if(rent&&!valid_rent){
+	validation.append("<p>Rent should be a number like $450</p>");
 
-    if(!name||!rent){
-	validation.text("It is important that you fill in the name and email fields for preview to work");
     }
-    if(name&&rent){
+    if(!name||!rent){
+	validation.append("<p>It is important that you fill in the name and rent fields for preview to work</p>");
+    }
+
+    if(name && valid_rent){
 	//analyze this
     }
 
 });
+
+function validateEmail(email) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+} 
