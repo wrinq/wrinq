@@ -353,6 +353,17 @@ input:text:{
 input[type=text]{
     padding:2%;
 }
+
+.var{
+color:#d33682;
+}
+
+.payment{
+text-decoration:underline;
+color:#08c;
+cursor:pointer;
+}
+
 @media (min-width:700px){
     .center-responsive{
 	margin-left:20%;
