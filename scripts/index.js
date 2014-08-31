@@ -56,7 +56,7 @@ $("#notify").click(function(e){
     var valid_rent = isNaN(int_rent)?false:int_rent;
     var valid_email= validateEmail(email)?email:false;
     if(rent&&!valid_rent){
-	validation.append("<p>Rent should be a number like $450, &pound 579 etc</p>");
+	validation.append("<p>Rent should be a number like 450, 579 etc</p>");
 
     }
     if(!valid_email)validation.append("<p>It looks like you mistyped the email address. Could you check again?</p>");
