@@ -46,8 +46,12 @@
 	  
 	  <p><label for="tname">Name of your tenant (Required)</label></p>
 	  <p><input type="text" name="name" id="tname" value="" placeholder="Johnny" required/></p>
-	  <p><label for="trent">Rent to collect (Required, e.g: $ 570,&pound 325 etc)</label></p>
-	  <p> <input type="text" id="trent" name="actual_rent" value="" placeholder="$1250" required/></p>
+	  <p> 
+	    <label for="trent">Rent to collect (Required, e.g: $ 570,&pound 325 etc)</label></p>
+	  <p id="preview_currency"><select></select></p>
+	  <p>
+	     
+	    <input type="text" id="trent" name="actual_rent" value="" placeholder="$1250" required/></p>
 	  <p><label for="temail">Email of your tenant</label></p>
 	  <p><input type="email" name="" value="" id="temail" placeholder="johnny@example.com"/></p>
 	</form>
@@ -62,7 +66,7 @@
         <h3>Email preview</h3>
 	<div class="email">
           <p><strong>From</strong>: your-landlord@xyz.com</p>
-	  <p><strong>Subject</strong>: Your rent Rent for the month of x <p>
+	  <p><strong>Subject</strong>: Your rent Rent for the month of X <p>
 	  <p>
 	    Dear <span class="var" id="var_name">Johnny</span>,
 	  </p>
