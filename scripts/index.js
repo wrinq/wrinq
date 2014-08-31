@@ -10,7 +10,7 @@ for(var key in currency){
     select.append(option);
     select_email.append(option);
 }
- 
+
 $("#preview").click(function(e){
     var validation = $("#preview_validation");
     validation.html("");
@@ -54,14 +54,15 @@ $("#notify").click(function(e){
     var email = $("#lemail").val();
     var rent =$("#lrent").val();
     var int_rent = parseInt(rent.replace(/[^0-9]/gi, ''),10);
-    var valid_rent = isNaN(int_rent)?false:rent;
-    var valid_email= email? validateEmail(email):false;
+    var valid_rent = isNaN(int_rent)?false:int_rent;
+    var valid_email= validateEmail(email)?email:false;
     if(rent&&!valid_rent){
 	validation.append("<p>Rent should be a number like $450, &pound 579 etc</p>");
 
     }
+    if(!valid_email)validation.append("<p>It looks like you mistyped the email address. Could you check again?</p>");
     if(!name||!rent||!valid_email){
-	validation.append("<p>Could you please fill in the email,rent and first name fields so we can send you an email?</p>");
+	validation.append("<p>Could you please fill in a valid email,rent and first name fields so we can send you an email?</p>");
     }
 
     if(name && valid_rent && valid_email){
