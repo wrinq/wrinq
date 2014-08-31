@@ -20,7 +20,7 @@ $("#preview").click(function(e){
     var rent =$("#trent").val();
     var int_rent = parseInt(rent.replace(/[^0-9]/gi, ''),10);
     var valid_rent = isNaN(int_rent)?false:rent;
-    var valid_email= email? validateEmail(email):false;
+    var valid_email= email? validateEmail(email):int_rent;
     if(name) $("#var_name").text(name);
     if(valid_email) $("#var_email").text(email);
     if(valid_rent) $("#var_rent").html(valid_rent);    
