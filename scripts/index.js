@@ -3,7 +3,6 @@ var currency={"USD":{"symbol":"$","name":"US Dollar","symbol_native":"$","decima
 
 var select = $("#preview_currency>select");
 var select_email = $("#email_currency>select"); 
-console.log(select);
 for(var key in currency){
     if(!currency.hasOwnProperty(key))continue;
     var option = "<option value="+currency[key].name+">"+currency[key].name+"("+currency[key].symbol_native+")</option>";
