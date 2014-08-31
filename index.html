@@ -145,16 +145,18 @@
 	  Please join the mailing list if you would like to be notified when wrinq launches.]  </p>
 
 	<form  class="email-form" id="email_form">
-          <p><label for="">Email</label></p>
-	  <p> <input type="text" name="" value="" placeholder="To send you notification" required/></p>
-	  <p><label for="">Rent</label></p>
-	  <p> <input type="text" name="" value="" placeholder="That you plan to collect" required/></p>
-	  <p><label for="">First Name</label></p>
-          <p><input type="text" name="" value="" placeholder="So we can say hi" required/></p>
-          <p><label for="">Last Name</label></p>
-          <p><input type="text" name="" value="" placeholder="Why not?" required/></p>
+          <p><label for="lemail">Email</label></p>
+	  <p> <input type="email" id="lemail" name="lemail" required value="" placeholder="To send you notification" required/></p>
+	  <p><label for="lrent">Rent</label></p>
+	  <p> <input type="text" id="lrent" required name="rent" value="" placeholder="That you plan to collect" required/></p>
+	  <p><label for="lname">First Name</label></p>
+          <p><input type="text" id="lname" name="lname" value="" placeholder="So we can say hi" required/></p>
+          <p><label for="llname">Last Name</label></p>
+          <p><input type="text" id="llname" name="llname" value="" placeholder="Why not?"/></p>
 	  <p><span class="button" id="notify">Notify me when wrinq launches </span></p>
-        </form>	
+        </form>
+	<div id="email_validation" class="error">
+	</div>	
 	<p>* We will never send you any spam.</p>
       </div>
     </div>
