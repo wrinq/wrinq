@@ -48,7 +48,7 @@ $("#email-form").click(function(e){
 
     }
     if(!name||!rent||!valid_email){
-	validation.append("<p>Could you please fill in the email,name and rent fields so we can send you an email?</p>");
+	validation.append("<p>Could you please fill in the email,rent and first name fields so we can send you an email?</p>");
     }
 
     if(name && valid_rent && valid_email){
