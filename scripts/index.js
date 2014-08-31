@@ -2,8 +2,8 @@ $("#preview").click(function(e){
     var validation = $("#preview_validation");
     validation.html("");
     
-    var name = $("#name_tenant").val();
-    var email = $("#email_tenant").val();
+    var name = $("#tname").val();
+    var email = $("#temail").val();
     var rent =$("#rent_tenant").val();
     var int_rent = parseInt(rent.replace(/[^0-9]/gi, ''),10);
     var valid_rent = isNaN(int_rent)?false:rent;
