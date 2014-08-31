@@ -59,7 +59,6 @@ $("#notify").click(function(e){
 	validation.append("<p>Rent should be a number like 450, 579 etc</p>");
 
     }
-    if(!valid_email)validation.append("<p>It looks like you mistyped the email address. Could you check again?</p>");
     if(!name||!rent||!valid_email){
 	validation.append("<p>Could you please fill in a valid email,rent and first name fields so we can send you an email?</p>");
     }
