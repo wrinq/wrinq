@@ -19,11 +19,13 @@ $("#preview").click(function(e){
     var email = $("#temail").val();
     var rent =$("#trent").val();
     var int_rent = parseInt(rent.replace(/[^0-9]/gi, ''),10);
+    var symbol = $("#preview_currency>select :selected").text();
+    var symbol_extract = symbol.substring(symbol.indexOf("(")+1,symbol.indexOf(")"));
     var valid_rent = isNaN(int_rent)?false:rent;
     var valid_email= email? validateEmail(email):int_rent;
     if(name) $("#var_name").text(name);
     if(valid_email) $("#var_email").text(email);
-    if(valid_rent) $("#var_rent").html(valid_rent);    
+    if(valid_rent) $("#var_rent").html(symbol_extract+" "+valid_rent);    
 
     if(rent&&!valid_rent){
 	validation.append("<p>Rent should be a number like $450, &pound 579 etc</p>");
