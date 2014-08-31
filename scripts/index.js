@@ -22,9 +22,6 @@ $("#preview").click(function(e){
     var symbol_extract = symbol.substring(symbol.indexOf("(")+1,symbol.indexOf(")"));
     var valid_rent = isNaN(int_rent)?false:int_rent;
     var valid_email= validateEmail(email)?email:false;
-    if(name) $("#var_name").text(name);
-    if(valid_email) $("#var_email").text(email);
-    if(valid_rent) $("#var_rent").html(symbol_extract+" "+valid_rent);    
 
     if(rent&&!valid_rent){
 	validation.append("<p>Rent should be a number like 450, 579 etc</p>");
@@ -35,6 +32,9 @@ $("#preview").click(function(e){
     }
 
     if(name && valid_rent){
+	$("#var_name").text(name);
+	if(valid_email) $("#var_email").text(email);
+	$("#var_rent").html(symbol_extract+" "+valid_rent);    
 	//analyze this
     }
 
