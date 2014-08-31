@@ -4,7 +4,7 @@ $("#preview").click(function(e){
     
     var name = $("#tname").val();
     var email = $("#temail").val();
-    var rent =$("#rent_tenant").val();
+    var rent =$("#trent").val();
     var int_rent = parseInt(rent.replace(/[^0-9]/gi, ''),10);
     var valid_rent = isNaN(int_rent)?false:rent;
     var valid_email= email? validateEmail(email):false;
