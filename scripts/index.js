@@ -13,6 +13,7 @@ $("#preview").click(function(e){
     if(name) $("#var_name").text(name);
     if(valid_email) $("#var_email").text(email);
     if(valid_rent) $("#var_rent").text(valid_rent);    
+
     if(rent&&!valid_rent){
 	validation.append("<p>Rent should be a number like $450</p>");
 
@@ -46,11 +47,11 @@ $("#email-form").click(function(e){
 	validation.append("<p>Rent should be a number like $450</p>");
 
     }
-    if(!name||!rent||!email){
-	validation.append("<p>It is important that you fill in the name and rent fields for preview to work</p>");
+    if(!name||!rent||!valid_email){
+	validation.append("<p>Could you please fill in the email,name and rent fields so we can send you an email?</p>");
     }
 
-    if(name && valid_rent){
+    if(name && valid_rent && valid_email){
 	//analyze this
     }
 
