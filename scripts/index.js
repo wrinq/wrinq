@@ -3,7 +3,10 @@
 var url = "http://localhost:5984/_uuids?count=2";
 
 $.getJSON(url,function(data){
-    console.log(data);
+   var uuids = data.uuids; 
+    $('#preview_form').append('<input type="hidden" name="_id" value="'+uuids[0]+'"/>');
+    $('#email_form').append('<input type="hidden" name="_id" value="'+uuids[2]+'"/>');
+    console.log(uuids);
 });
 
 var select = $("#preview_currency>select");
