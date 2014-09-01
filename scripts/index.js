@@ -1,9 +1,9 @@
 //get two tokens here
 
-var url = "http://localhost:5984/_uuids?count=2";
+var secure_url = "http://localhost:5984/_uuids?count=2";
 
-$.getJSON(url,function(data){
-   var uuids = data.uuids; 
+$.getJSON(secure_url,function(data){
+    var uuids = data.uuids; 
     $('#preview_form').append('<input type="hidden" name="_id" value="'+uuids[0]+'"/>');
     $('#email_form').append('<input type="hidden" name="_id" value="'+uuids[2]+'"/>');
     
@@ -41,6 +41,7 @@ $("#preview").click(function(e){
 
     if(name && valid_rent){
 	$("#var_name").text(name);
+	$("#payment_des").attr('title',name+" on clicking this link you will be taken to paypal to pay the rent");
 	if(valid_email) $("#var_email").text(email);
 	$("#var_rent").html(symbol_extract+" "+valid_rent);    
 	//analyze this
