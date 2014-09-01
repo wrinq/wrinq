@@ -373,7 +373,7 @@ color:#08c;
 cursor:pointer;
 }
 
-@media (min-width:700px){
+@media (min-width:767px){
     .center-responsive{
 	margin-left:20%;
     }
