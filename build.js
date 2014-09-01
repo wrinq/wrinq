@@ -16,7 +16,7 @@ buildify.task({
     task:function(){
 	console.log("starting js compression....");
 	buildify().load("./scripts/index.js").uglify().save("./scripts/index.min.js");
-	console.log("completed script completion");
+	console.log("completed script compaction");
     }
 
 });
