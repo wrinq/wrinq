@@ -321,7 +321,7 @@ input:text:{
     text-align:center;
 }
 
-.button{
+.button,.button-notify{
     padding:10px;
     background-color:#08c;
     color:white;

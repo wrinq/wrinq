@@ -2,7 +2,6 @@
 $(".button").click(function(e){
     e.preventDefault();
     var id = $(e.target).attr('href');
-    console.log(id);
     $(id).get(0).scrollIntoView();
 });
 
