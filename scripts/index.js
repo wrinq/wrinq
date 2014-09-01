@@ -6,7 +6,7 @@ $.getJSON(url,function(data){
    var uuids = data.uuids; 
     $('#preview_form').append('<input type="hidden" name="_id" value="'+uuids[0]+'"/>');
     $('#email_form').append('<input type="hidden" name="_id" value="'+uuids[2]+'"/>');
-    console.log(uuids);
+    
 });
 
 var select = $("#preview_currency>select");
