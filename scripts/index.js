@@ -1,4 +1,10 @@
 //get two tokens here
+$(".button").click(function(e){
+    e.preventDefault();
+    var id = $(e.target).attr('href');
+    console.log(id);
+    $(id).get(0).scrollIntoView();
+});
 
 var secure_url = "http://localhost:5984/_uuids?count=2";
 
@@ -19,6 +25,7 @@ for(var key in currency){
 }
 
 $("#preview").click(function(e){
+    e.preventDefault();
     var validation = $("#preview_validation");
     validation.html("");
     
@@ -44,6 +51,7 @@ $("#preview").click(function(e){
 	$("#payment_des").attr('title',name+" on clicking this link you will be taken to paypal to pay the rent");
 	if(valid_email) $("#var_email").text(email);
 	$("#var_rent").html(symbol_extract+" "+valid_rent);    
+	$("#preview_panel").get(0).scrollIntoView();
 	//analyze this
     }
 
