@@ -3,7 +3,9 @@ var currency={"USD":{"symbol":"$","name":"US Dollar","symbol_native":"$","decima
 
 var url = "http://localhost:5984/_uuids?count=2";
 
-$.getJSON()
+$.getJSON(url,function(data){
+    console.log(data);
+});
 
 var select = $("#preview_currency>select");
 var select_email = $("#email_currency>select"); 
