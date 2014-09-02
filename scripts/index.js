@@ -85,7 +85,7 @@ $("#notify").click(function(e){
     }
 
     if(name && valid_rent && valid_email){
-	//analyze this
+	analyze($("#email_form"));
     }
 
 });
