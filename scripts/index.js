@@ -1,18 +1,20 @@
-//get two tokens here
 $(".button").click(function(e){
     e.preventDefault();
     var id = $(e.target).attr('href');
     $(id).get(0).scrollIntoView();
 });
 
-var secure_url = "http://localhost:5984/_uuids?count=2";
+var get_tokens = "http://localhost:5984/wrinq_landing_analytics/_design/wrinq_landing_analytics/_update/create_doc";
+var metric_analysis = "http://localhost:5984/wrinq_landing_analytics/_design/wrinq_landing_analytics/_update/update_analysis";
 
-$.getJSON(secure_url,function(data){
-    var uuids = data.uuids; 
-    $('#preview_form').append('<input type="hidden" name="_id" value="'+uuids[0]+'"/>');
-    $('#email_form').append('<input type="hidden" name="_id" value="'+uuids[2]+'"/>');
-    
-});
+function analyze(){
+    $.post(get_tokens,function(data){
+	var metric_analysis_req = metric_analysis+data;
+	$.put(metric_analysis_req,function(data){
+	    console.log(data);
+	});
+    });
+};
 
 var select = $("#preview_currency>select");
 var select_email = $("#email_currency>select"); 
@@ -51,7 +53,7 @@ $("#preview").click(function(e){
 	if(valid_email) $("#var_email").text(email);
 	$("#var_rent").html(symbol_extract+" "+valid_rent);    
 	$("#preview_panel").get(0).scrollIntoView();
-	//analyze this
+	analyze();
     }
 
 });
