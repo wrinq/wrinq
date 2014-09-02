@@ -5,14 +5,21 @@ $(".button").click(function(e){
 });
 
 var get_tokens = "http://localhost:5984/wrinq_landing_analytics/_design/wrinq_landing_analytics/_update/create_doc";
-var metric_analysis = "http://localhost:5984/wrinq_landing_analytics/_design/wrinq_landing_analytics/_update/update_analysis";
+var metric_analysis = "http://localhost:5984/wrinq_landing_analytics/_design/wrinq_landing_analytics/_update/update_analysis/";
 
-function analyze(){
+function analyze(form){
+    console.log(form.serialize());
     $.post(get_tokens,function(data){
 	var metric_analysis_req = metric_analysis+data;
-	$.put(metric_analysis_req,function(data){
-	    console.log(data);
-	});
+	$.ajax(
+	    {
+		url:metric_analysis_req,
+		type:"PUT",
+		data:form.serialize(),
+		success:function(data){
+		    console.log(data);
+		}
+	    });
     });
 };
 
@@ -52,8 +59,8 @@ $("#preview").click(function(e){
 	$("#payment_des").attr('title',name+" on clicking this link you will be taken to paypal to pay the rent");
 	if(valid_email) $("#var_email").text(email);
 	$("#var_rent").html(symbol_extract+" "+valid_rent);    
+	analyze($("#preview_form"));
 	$("#preview_panel").get(0).scrollIntoView();
-	analyze();
     }
 
 });
