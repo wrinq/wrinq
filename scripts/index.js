@@ -56,7 +56,7 @@ $("#preview").click(function(e){
 
     if(name && valid_rent){
 	$("#var_name").text(name);
-	$("#payment_des").attr('title',name+" on clicking this link you will be taken to paypal to pay the rent");
+	$("#payment_des").attr("On clicking this link you will be taken to paypal to pay the rent");
 	if(valid_email) $("#var_email").text(email);
 	$("#var_rent").html(symbol_extract+" "+valid_rent);    
 	analyze($("#preview_form"));
