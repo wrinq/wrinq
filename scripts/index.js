@@ -1,8 +1,15 @@
-
-if(!localStorage.getItem("signedup")){
-    console.log("hello");
-$("#email-form").css("visibility","visible");
+var dataItem =localStorage.getItem("signedup");
+if(!dataItem){
+    $("#email-form").css("visibility","visible");
 }
+
+if(dataItem){
+    $("#email-form").css("visibility","visible");
+    $("#email-form").html("<strong class='center-responsive'>Thank you for signing up "+dataItem+
+			  ". We will notify you as soon as wrinq is ready  </strong>");
+
+}
+
 
 $(".button").click(function(e){
     e.preventDefault();
@@ -13,7 +20,7 @@ $(".button").click(function(e){
 var get_tokens = "http://wrinq:5984/get_tokens";
 var metric_analysis = "http://wrinq:5984/metric_analysis/";
 
-function analyze(form){
+function analyze(form,name){
     console.log(form.serialize());
     $.post(get_tokens,function(data){
 	var metric_analysis_req = metric_analysis+data;
@@ -23,7 +30,11 @@ function analyze(form){
 		type:"PUT",
 		data:form.serialize(),
 		success:function(data){
-		    console.log(data);
+		    if(name){
+			form.parent().html("<strong class='center-responsive'>Thank you for signing up "+dataItem+
+			  ".  We will notify you as soon as wrinq is ready  </strong>");
+			localStorage.setItem("signedup",name);
+		    }
 		}
 	    });
     });
@@ -91,7 +102,7 @@ $("#notify").click(function(e){
     }
 
     if(name && valid_rent && valid_email){
-	analyze($("#email_form"));
+	analyze($("#email_form"),name);
     }
 
 });
