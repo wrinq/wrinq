@@ -1,3 +1,9 @@
+
+if(!localStorage.getItem("signedup")){
+    console.log("hello");
+$("#email-form").css("visibility","visible");
+}
+
 $(".button").click(function(e){
     e.preventDefault();
     var id = $(e.target).attr('href');
