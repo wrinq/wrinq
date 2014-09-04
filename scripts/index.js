@@ -4,8 +4,8 @@ $(".button").click(function(e){
     $(id).get(0).scrollIntoView();
 });
 
-var get_tokens = "http://localhost:5984/wrinq_landing_analytics/_design/wrinq_landing_analytics/_update/create_doc";
-var metric_analysis = "http://localhost:5984/wrinq_landing_analytics/_design/wrinq_landing_analytics/_update/update_analysis/";
+var get_tokens = "http://wrinq:5984/get_tokens";
+var metric_analysis = "http://wrinq:5984/metric_analysis/";
 
 function analyze(form){
     console.log(form.serialize());
