@@ -383,3 +383,7 @@ cursor:pointer;
 .error{
 color:#A94442;
 }
+
+select{
+width:80%;
+}
