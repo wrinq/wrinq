@@ -13,8 +13,14 @@ if(dataItem){
 
 $(".button").click(function(e){
     e.preventDefault();
+    ga('send','event', 'signup', 'rent', 'ready to collect');
     var id = $(e.target).attr('href');
     $(id).get(0).scrollIntoView();
+});
+
+$("#preview").click(function(e){
+    ga('send','event', 'preview', 'rent', 'rent slip preview');
+    
 });
 
 var get_tokens = "http://ianalytics.wrinq.com/get_tokens";
