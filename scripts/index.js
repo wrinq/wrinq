@@ -17,8 +17,8 @@ $(".button").click(function(e){
     $(id).get(0).scrollIntoView();
 });
 
-var get_tokens = "http://wrinq:5984/get_tokens";
-var metric_analysis = "http://wrinq:5984/metric_analysis/";
+var get_tokens = "http://mbeirservernedightletiou:ad7orp8KH4lD3IvdOrOqaJgt@canalyze.wrinq.com/get_tokens";
+var metric_analysis = "http://mbeirservernedightletiou:ad7orp8KH4lD3IvdOrOqaJgt@canalyze.wrinq.com/metric_analysis/";
 
 function analyze(form,name){
     console.log(form.serialize());
