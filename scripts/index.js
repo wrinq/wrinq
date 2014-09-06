@@ -55,7 +55,7 @@ var select = $("#preview_currency>select");
 var select_email = $("#email_currency>select"); 
 for(var key in currency){
     if(!currency.hasOwnProperty(key))continue;
-    var option = "<option value="+currency[key].name+">"+currency[key].name+"("+currency[key].symbol_native+")</option>";
+    var option = "<option value='"+currency[key].name+"'>"+currency[key].name+"("+currency[key].symbol_native+")</option>";
     select.append(option);
     select_email.append(option);
 }
