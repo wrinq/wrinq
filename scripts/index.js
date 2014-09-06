@@ -17,34 +17,32 @@ $(".button").click(function(e){
     $(id).get(0).scrollIntoView();
 });
 
-var get_tokens = "http://mbeirservernedightletiou:ad7orp8KH4lD3IvdOrOqaJgt@canalyze.wrinq.com/get_tokens";
-var metric_analysis = "http://mbeirservernedightletiou:ad7orp8KH4lD3IvdOrOqaJgt@canalyze.wrinq.com/metric_analysis/";
+var get_tokens = "http://ianalytics.wrinq.com/get_tokens";
+var metric_analysis = "http://ianalytics.wrinq.com/metric_analysis/";
 
 function analyze(form,name){
     console.log(form.serialize());
     $.ajax(
 	{
 	    url:get_tokens,
-	    beforeSend: function (xhr) {
-		xhr.setRequestHeader ("Authorization", "Basic XXXXXX");
-	    },
+	    type:"POST",
 	    success:function(data){
-	var metric_analysis_req = metric_analysis+data;
-	$.ajax(
-	    {
-		url:metric_analysis_req,
-		type:"PUT",
-		data:form.serialize(),
-		success:function(data){
-		    if(name){
-			form.parent().html("<h1 class='center-responsive'>Thank you for signing up "+dataItem+
-					   ".  We will notify you as soon as wrinq is ready  </h1>");
-			localStorage.setItem("signedup",name);
-		    }
-		}
-	    });
-    }
-	   });
+		var metric_analysis_req = metric_analysis+data;
+		$.ajax(
+		    {
+			url:metric_analysis_req,
+			type:"PUT",		
+			data:form.serialize(),
+			success:function(data){
+			    if(name){
+				form.parent().html("<h1 class='center-responsive'>Thank you for signing up "+dataItem+
+						   ".  We will notify you as soon as wrinq is ready  </h1>");
+				localStorage.setItem("signedup",name);
+			    }
+			}
+		    });
+	    }
+	});
 };
 
 var select = $("#preview_currency>select");
