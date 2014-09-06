@@ -35,7 +35,7 @@ function analyze(form,name){
 			data:form.serialize(),
 			success:function(data){
 			    if(name){
-				form.parent().html("<h1 class='center-responsive'>Thank you for signing up "+dataItem+
+				form.parent().html("<h1 class='center-responsive'>Thank you for signing up "+name+
 						   ".  We will notify you as soon as wrinq is ready  </h1>");
 				localStorage.setItem("signedup",name);
 			    }
