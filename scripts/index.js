@@ -22,7 +22,13 @@ var metric_analysis = "http://mbeirservernedightletiou:ad7orp8KH4lD3IvdOrOqaJgt@
 
 function analyze(form,name){
     console.log(form.serialize());
-    $.post(get_tokens,function(data){
+    $.ajax(
+	{
+	    url:get_tokens,
+	    beforeSend: function (xhr) {
+		xhr.setRequestHeader ("Authorization", "Basic XXXXXX");
+	    },
+	    success:function(data){
 	var metric_analysis_req = metric_analysis+data;
 	$.ajax(
 	    {
@@ -32,12 +38,13 @@ function analyze(form,name){
 		success:function(data){
 		    if(name){
 			form.parent().html("<h1 class='center-responsive'>Thank you for signing up "+dataItem+
-			  ".  We will notify you as soon as wrinq is ready  </h1>");
+					   ".  We will notify you as soon as wrinq is ready  </h1>");
 			localStorage.setItem("signedup",name);
 		    }
 		}
 	    });
-    });
+    }
+	   });
 };
 
 var select = $("#preview_currency>select");
