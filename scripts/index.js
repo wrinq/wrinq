@@ -5,8 +5,8 @@ if(!dataItem){
 
 if(dataItem){
     $("#email-form").css("visibility","visible");
-    $("#email-form").html("<h1 class='center-responsive'>Thank you for signing up "+dataItem+
-			  ". We will notify you as soon as wrinq is ready  </h1>");
+    $("#email-form").html("<h1>Thank you for signing up "+dataItem+
+			  ". We will notify you as soon as wrinq is ready.  </h1>");
 
 }
 
@@ -35,7 +35,7 @@ function analyze(form,name){
 			data:form.serialize(),
 			success:function(data){
 			    if(name){
-				form.parent().html("<h1 class='center-responsive'>Thank you for signing up "+name+
+				form.parent().html("<h1>Thank you for signing up "+name+
 						   ".  We will notify you as soon as wrinq is ready  </h1>");
 				localStorage.setItem("signedup",name);
 			    }
