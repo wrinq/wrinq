@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Manage your rent better with wrinq</title>
+    <link href="../styles/styles.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="grid grid-pad">
+      <div class="col-1-2 center-responsive">
+	<header>
+	  <a href="/" style="text-decoration:none;"><h1>Wrinq</h1></a>
+	</header>    
+	<ol>
+	  {{#archives}}
+	  <li>
+	    <p>
+	      <a href="/{{tag}}/{{_id}}">{{fields.title}}</a> 
+	      <small> {{fields.postedOn}}</small></p>        
+	  </li>
+	  {{/archives}}
+	</ol>
+	<hr/>
+      </div>
+    </div>
+  </body>
+</html>
