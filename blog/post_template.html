@@ -7,19 +7,16 @@
     <link href="../styles/styles.min.css" rel="stylesheet"/>
   </head>
   <body>
-    <div class="grid grid-pad center-responsive">
-
-      <header>
-	<h1>Wrinq</h1>
+    <div class="grid grid-pad">
+      <header class="center-responsive">
+	<a href="/" style="text-decoration:none;"><h1>Wrinq</h1></a>
       </header>
-      <div id="post" class="col-1-2">
+      <div id="post" class="col-1-2 center-responsive">
 	<h1>{{_source.title}}</h1>
 	<span>{{_source.postedBy}}</span>
-	<div class="postBody">{{{_source.postHtml}}}</div>
+	<div>{{{_source.postHtml}}}</div>
 	<hr>
       </div>
-
-    </div>
-    
+    </div>    
   </body>
 </html>
