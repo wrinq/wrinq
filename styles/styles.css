@@ -340,7 +340,7 @@ input:text:{
 }
 
 .pain{
-    background-color:whitesmoke;
+    background-color:#fafafa;
     padding:4px;
 }
 
@@ -387,4 +387,9 @@ color:#A94442;
 select{
 width:80%;
 padding:1%;
+}
+
+footer{
+background-color:#fafafa;
+border-top: 1px solid black;
 }
