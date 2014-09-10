@@ -291,6 +291,7 @@ body {
 body{
     line-height:2em;
     font-family:Verdana;
+    letter-spacing:2px;
 }
 
 ul>li{
@@ -364,31 +365,29 @@ input[type=text],input[type=email]{
 }
 
 .var{
-color:#d33682;
+    color:#d33682;
 }
 
 .payment{
-text-decoration:underline;
-color:#08c;
-cursor:pointer;
+    text-decoration:underline;
+    color:#08c;
+    cursor:pointer;
 }
 
 @media (min-width:767px){
     .center-responsive{
 	margin-left:20%;
-    }
-    
+    }   
 }
 
 .error{
-color:#A94442;
+    color:#A94442;
 }
 
 select{
-width:80%;
-padding:1%;
+    width:80%;
+    padding:1%;
 }
 
 footer{
-background-color:#fafafa;
 }
