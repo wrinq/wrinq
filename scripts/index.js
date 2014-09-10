@@ -27,7 +27,11 @@ var get_tokens = "http://ianalytics.wrinq.com/get_tokens";
 var metric_analysis = "http://ianalytics.wrinq.com/metric_analysis/";
 
 function analyze(form,name){
-    console.log(form.serialize());
+    var form_data = form.serialize();
+    form.parent().html(
+	"<h1>Thank you for signing up "+name+".  We will notify you as soon as wrinq is ready  </h1>"
+    );
+    
     $.ajax(
 	{
 	    url:get_tokens,
@@ -38,11 +42,9 @@ function analyze(form,name){
 		    {
 			url:metric_analysis_req,
 			type:"PUT",		
-			data:form.serialize(),
+			data:form_data,
 			success:function(data){
 			    if(name){
-				form.parent().html("<h1>Thank you for signing up "+name+
-						   ".  We will notify you as soon as wrinq is ready  </h1>");
 				localStorage.setItem("signedup",name);
 			    }
 			}
@@ -113,6 +115,7 @@ $("#notify").click(function(e){
     }
 
     if(name && valid_rent && valid_email){
+	$(this).hide();
 	analyze($("#email_form"),name);
     }
 
