@@ -357,7 +357,7 @@ hr{
 .email-form{
     background-color:#FFFFCC;
     padding:2%;
-    margin-top:2%
+    margin-top:2%;
     margin-left:2%;
 }
 
@@ -367,6 +367,9 @@ input[type=text],input[type=email]{
     border-radius:25px;
 }
 
+*:focus {
+    outline: 0;
+}
 .var{
     color:#d33682;
 }
