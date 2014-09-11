@@ -291,7 +291,8 @@ body {
 body{
     line-height:2em;
     font-family:Verdana;
-    letter-spacing:2px;
+    letter-spacing:1px;
+    color:#073642;
 }
 
 ul>li{
@@ -299,14 +300,14 @@ ul>li{
     padding:4px;
 }
 
+strong{
+letter-spacing:2px;
+}
 
 hr{
     border-color:whitesmoke;
 }
 
-input:text:{
-    width:100%;
-}
 
 .email{
     background-color:#f5f5dc;
@@ -362,6 +363,8 @@ input:text:{
 
 input[type=text],input[type=email]{
     padding:2%;
+    border:1px solid #08c;
+    border-radius:25px;
 }
 
 .var{
