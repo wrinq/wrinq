@@ -16,7 +16,7 @@ buildify.task({
     name:"js-min",
     task:function(){
 	console.log("starting js compression....");
-	buildify().concat([scriptsPath+"currency.js",scriptsPath+"index.js"])
+	buildify().concat([scriptsPath+"currency.js",scriptsPath+"index.js",scriptsPath+"rent_calculator.js"])
 	    .uglify().save("./scripts/index.min.js");
 	console.log("completed script compaction");
     }
