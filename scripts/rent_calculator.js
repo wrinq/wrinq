@@ -4,7 +4,10 @@ $("#trent").on('input',function(e){
      var text = $(this).val();
     
     var number = parseInt(text);
-    if(!number) return;
+    if(!number) {
+	change(you,0);
+	change(me,0);
+    }
     if(number<1000){
 	var per = number*.03;
 	change(you,number - per);
