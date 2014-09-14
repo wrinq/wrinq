@@ -28,9 +28,13 @@ var metric_analysis = "http://ianalytics.wrinq.com/metric_analysis/";
 
 function analyze(form,name){
     var form_data = form.serialize();
-    form.parent().html(
-	"<h1>Thank you for signing up "+name+".  We will notify you as soon as wrinq is ready  </h1>"
-    );
+    if(name){
+	form.parent().html(
+	    "<h1>Thank you for signing up "+name+".  We will notify you as soon as wrinq is ready  </h1>"
+	);
+    }
+    form.trigger('reset'); 
+
     
     $.ajax(
 	{
@@ -44,6 +48,7 @@ function analyze(form,name){
 			type:"PUT",		
 			data:form_data,
 			success:function(data){
+			    
 			    if(name){
 				localStorage.setItem("signedup",name);
 			    }
