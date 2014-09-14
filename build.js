@@ -18,6 +18,8 @@ buildify.task({
 	console.log("starting js compression....");
 	buildify().concat([scriptsPath+"currency.js",scriptsPath+"index.js",scriptsPath+"rent_calculator.js"])
 	    .uglify().save("./scripts/index.min.js");
+	buildify().concat([scriptsPath+"blog.js",scriptsPath+"rent_calculator.js"])
+	    .uglify().save("./scripts/blog.min.js");
 	console.log("completed script compaction");
     }
 
