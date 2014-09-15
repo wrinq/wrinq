@@ -35,5 +35,5 @@ if(number>=10000){
 });
 
 var change= function(what,_with){
-    what.text(_with);
+    what.text(_with.toFixed(2));
 };
