@@ -1,5 +1,6 @@
 var buildify = require("buildify");
 var scriptsPath = "./scripts/";
+var fs = require("fs");
 
 buildify.task({
     name:"css-min",
@@ -21,6 +22,18 @@ buildify.task({
 	buildify().concat([scriptsPath+"blog.js",scriptsPath+"rent_calculator.js"])
 	    .uglify().save("./scripts/blog.min.js");
 	console.log("completed script compaction");
+    }
+
+});
+
+
+buildify.task({
+    name:"index-assembly",
+    task:function(){
+	console.log("assembling the index page");
+	var index_1 = fs.readFileSync("./index_part_1.html",{encoding:"utf-8"});
+	var index_2 = fs.readFileSync("./index_part_2.html",{encoding:"utf-8"});
+	console.log(index_1+index_2);
     }
 
 });
