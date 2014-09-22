@@ -4,6 +4,7 @@
 	"watchr":"2.4.11",
 	"dummy-json":"0.0.2",
 	"request":"*",
-	"mustache":"*"
+	"mustache":"*",
+	"html-minifier":"*"
     }
 }
