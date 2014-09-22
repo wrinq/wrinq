@@ -1,0 +1,65 @@
+    <div class="grid grid-pad hidden" id="email-form">
+      
+      <div class="col-1-2 center-responsive email-capture ">
+	<h1>Join the mailing list to be notified of wrinq's launch</h1>
+	<p>[wrinq is in testing phase at the moment.  Please join the mailing list if you would 
+	  like to be notified when wrinq launches.]  </p>
+
+	<form  class="email-form " id="email_form">
+          <p><label for="lemail">Email (Required, e.g:jhonny@abc.com)</label></p>
+	  <p> <input type="email" id="lemail" name="lemail" required value="" 
+		     placeholder="To send you notification" required/></p>
+	  <p><label for="lrent">Rent (Required, e.g: $540, &pound 329 etc)</label></p>
+          <p id="email_currency">
+            <select name="lcurrency">
+            </select>
+          </p>
+	  <p> 
+	    <input type="text" id="lrent" required name="rent" value="" 
+		   placeholder="That you plan to collect" required/>
+	  </p>
+	  <p><label for="lname">First Name (Required)</label></p>
+          <p><input type="text" id="lname" name="lname" value="" placeholder="So we can say hi" required/></p>
+          <p><label for="llname">Last Name</label></p>
+          <p><input type="text" id="llname" name="llname" value="" placeholder="Why not?"/></p>
+        </form>
+	<p><span class="button-notify" id="notify">Email me when wrinq launches </span></p>
+	<div id="email_validation" class="error">
+	</div>	
+	<p>* We will never send you any spam.</p>
+      </div>
+    </div>
+<footer>
+    <div class="grid grid-pad">
+      <div class="col-1-2 center-responsive">
+        <a href="/blog">Get to know wrinq better. Read the blog</a>
+      </div>
+    </div>    
+</footer>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-54510875-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-54510875-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <script type="text/javascript" src="./scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./scripts/index.min.js"></script>
+  </body>
+</html>

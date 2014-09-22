@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale = 1.0;" />
+    <title>Collect your rent online and track your rental income | wrinq </title>
+    <link href="./styles/styles.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="grid grid-pad">
+      
+      <div class="col-1-2 center-responsive">
+	<div style="text-align: center; 
+		    font-size: 455%; 
+		    margin-bottom: 25%; 
+		    margin-top: 20%; 
+		    opacity: 0.7; 
+		    font-family: Serif;">
+	  WRINQ
+	</div>
+	<h1 style="text-align:center;">Streamline your rental property  business</h1>
+        <hr/>
+	<p class="pain">
+	  Are you getting tired of manually collecting rent, issuing rental slips to your tenants
+	  and keeping track of your rental expenses? Wouldn't you like to <strong> automate</strong> the boring 
+	  stuff so you can just <strong>relax</strong> 
+	  and see the money flowing into your account while sipping on a cool watermelon juice 
+	  on a sunny afternoon with your loved ones? Well then wrinq is here to help you.
+	</p> 
+	<hr/>      
+      </div>   
+    </div>
+    <div class="grid grid-pad">
+      <div class="col-1-2 center-responsive">
+	
+	<h1>wrinq helps you by:</h1>
+	
+	<ul>
+	  <li><strong>Collecting recurring</strong> rent from your tenants online. </li>
+	  <li> Automatically <strong>emailing the rent slip.</strong></li>
+	  <li><strong>Tracking</strong> your rental income and expenses.</li>
+	  <li>Getting <strong>rid of manual bookkeeping</strong></li>
+	</ul>
+	<p >
+	  <a href="#email-form" class="button">
+	    Collect your rent now
+	  </a>
+	</p>
+      </div>
+    </div>
+    <hr/>
+    <div class="grid grid-pad">     
+      <h1  class="center-responsive">Or try it out right here</h1>
+      <div class="col-1-2">
+	<form id="preview_form">
+	  
+	  <p><label for="tname">Name of your tenant (Required)</label></p>
+	  <p><input type="text" name="tname" id="tname" value="" placeholder="Johnny" required/></p>
+	  <p>  <label for="trent">Rent to collect (Required, e.g: $ 570,&pound 325 etc)</label></p>
+	  <p id="preview_currency"><select name="tcurrency"></select></p>
+          <p>
+
+	    
+	    <input type="text" id="trent" name="rent" value="" placeholder="1250" required/></p>
+	  <p class="transaction" 
+	     style="border-bottom: 1px solid #08c;
+		    width:60%; margin-bottom:0px;">
+	    You get:  <span id="you">1225</span>
+	  </p>
+	  <p class="transaction" 
+	     style="margin-top:0px;">
+	    We get: <span id="me">25</span></p>
+	  
+	  <p><label for="temail">Email of your tenant</label></p>
+	  <p><input type="email" name="temail" value="" id="temail" placeholder="johnny@example.com"/></p>
+	</form>
+	<p>
+	  [Try changing the name/rent/email fields
+	  in the form above and click on preview to see what happens]
+	</p>
+	<p><a href="#preview_panel" class="button-regular" id="preview"> Show preview</a></p>
+        <div id="preview_validation" class="error"></div>
+      </div>
+      <div class="col-1-2" id="preview_panel">
+        <h3>Email preview</h3>
+	<div class="email">
+          <p><strong>From</strong>: your-landlord@xyz.com</p>
+	  <p><strong>Subject</strong>: Your rent Rent for the month of X <p>
+	  <p>
+	    Dear <span class="var" id="var_name">Johnny</span>,
+	  </p>
+	  <p>
+	    Your rent for the month of X is <span class="var" id="var_rent">$1250</span>. You can   
+	    <span class="payment" id="payment_des" 
+		  title="On clicking this link you will be taken to paypal to pay the rent"> 
+	      pay it online</span>,conveniently, in just two minutes. As always 
+	    let me know if you need anything. Enjoy your stay.
+	  </p>
+	  <p> 
+	    Thanking you,	  
+	  </p>
+	  <p>Your very happy landlord.</p>         
+	</div>
+	<p>[ Demo of the emaill that will be sent to  
+	  <span class="var" id="var_email">johnny@example.com</span> 
+	  if you decide 
+	  to use wrinq. And yes you can <strong> write your own custom message </strong>]</p>
+      </div>
+    </div> 
+    <hr/>
+
+    <div class="grid grid-pad">
+      <div class="col-1-2 center-responsive">
+	<p>Yes it is as simple as that. Simply provide the name and  
+	  the email of your tenant and wrinq will send periodic emails to collect the rent 
+	  while you just sit back and see you rental income grow :) 
+	</p>
+
+	<ul>
+	  <li> There is<strong> no sign up fees</strong>. Pay only a small transaction fees when you collect rent</li>
+	  <li>You can collect from <strong>multiple tenants</strong></li>
+	  <li>Tenants pay <strong>securely</strong> via paypal</li>
+	  <li>We deposit the rent into <strong>your</strong> paypal account</li>
+          <li>wrinq <strong>automatically emails</strong> rent slips as soon as the rent is received</li>
+	  <li>You can track your rental expenses and <strong>profits</strong> over time</li>
+	</ul>
+	<p>
+	  <a href="#email-form" class="button">
+	    Collect your rent now
+	  </a>
+	</p>
+      </div>
+    </div>
+    <hr/>
+    <div class="grid grid-pad">
+      <div class="col-1-2  center-responsive">
+	<p>
+	  <h1>Want to know more? Keep reading</h1>
+	  
+	</p>
+	<p><strong>Q</strong>: What do I need to use wrinq?</p>
+	<p><strong>A</strong>: Just an email address and a paypal account.</p>
+	<p><strong>Q</strong>: Why do I need a paypal account?</p>
+	<p><strong>A</strong>: Paypal is the easiest and the most secure way 
+	  to send and receive money online. It is trusted by millions of users. Paypal will take care 
+	  of processing the money paid by your tenant and then we will direct it to
+	  securely deposit it into your paypal account. 
+	  After which you decide what to do with it. It is much quicker (instantaneous) than bank transfers and 
+	  just as secure. </p>
+	<p><strong>Q:</strong> Does my tenant need to have a paypal account</p>
+        <p><strong>A:</strong> No. Your tenant does not need a paypal account. 
+	  All that is needed is a way to make online payments. Credit cards/debit cards etc.</p>
+        <p><strong>Q:</strong> How much do you charge me? </p>
+        <p><strong>A:</strong> wrinq has no sign up fees. You can simply create an account and 
+	  start using wrinq for absolutely free. We charge <strong> a small fee</strong>  
+	  only when your tenant pays you money. So <strong>we get paid when you get paid</strong>. </p>
+        <p><strong>Q:</strong> What if I don't like watermelon juice?</p>
+        <p><strong>A:</strong> You don't mean that.... really? You don't like watermelon juice? 
+	  Well then here is my sales pitch to you:- 
+	  <a href="http://livelovefruit.com/2013/07/8-amazing-health-benefits-of-watermelon/" target="_blank">8 amazing health benefits of watermelons</a>. If you don't like the taste then drink for your health!
+      </div>
+    </div>
+    <hr/>
