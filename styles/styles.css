@@ -432,3 +432,9 @@ pre {
     height:65px;
     width:65px;
 }
+
+blockquote{
+    margin-left:5%;
+    margin-right:5%;
+    font-style:italic;
+}
