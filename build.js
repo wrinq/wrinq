@@ -11,7 +11,7 @@ buildify.task({
 	    "/styles/simple_grid.css",
 	    "./styles/wrinq_styles.css",
 	    "./styles/bootstrap_tables.css"
-	]).cssmin().save("./styles/style.min.css");
+	]).cssmin().save("./styles/styles.min.css");
 
 	console.log("Completed css completion");
     }
@@ -33,14 +33,14 @@ buildify.task({
 });
 
 
-buildify.task({
-    name:"index-assembly",
-    task:function(){
-	console.log("assembling the index page");
-	var index_1 = fs.readFileSync("./index_part_1.html",{encoding:"utf-8"});
-	var index_2 = fs.readFileSync("./index_part_2.html",{encoding:"utf-8"});
-	fs.writeFileSync("./index.html",index_1+index_2);
-	console.log("index page assembled");
-    }
+// buildify.task({
+//     name:"index-assembly",
+//     task:function(){
+// 	console.log("assembling the index page");
+// 	var index_1 = fs.readFileSync("./index_part_1.html",{encoding:"utf-8"});
+// 	var index_2 = fs.readFileSync("./index_part_2.html",{encoding:"utf-8"});
+// 	fs.writeFileSync("./index.html",index_1+index_2);
+// 	console.log("index page assembled");
+//     }
 
-});
+// });
