@@ -7,7 +7,12 @@ buildify.task({
     name:"css-min",
     task:function(){
 	console.log("starting css compression....");
-	buildify().load("./styles/styles.css").cssmin().save("./styles/styles.min.css");
+	buildify().concat([
+	    "/styles/simple_grid.css",
+	    "./styles/wrinq_styles.css",
+	    "./styles/bootstrap_tables.css"
+	]).cssmin().save("./styles/style.min.css");
+
 	console.log("Completed css completion");
     }
 
