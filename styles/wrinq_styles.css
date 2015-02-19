@@ -10,6 +10,11 @@
     margin-bottom:1%;
 }
 
+.book{
+    margin-top:2%;
+    border:1px solid #ddd;
+    padding:10px;
+}
 
 body{
     line-height:2em;
