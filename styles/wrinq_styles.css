@@ -168,3 +168,15 @@ blockquote{
     margin-right:5%;
     font-style:italic;
 }
+
+a{
+    color:#08c;
+    text-decoration:none;
+    border-bottom:1px dotted whitesmoke;
+}
+
+.book a{
+    color:#08c;
+    text-decoration:none;
+    border-bottom: none;
+}
