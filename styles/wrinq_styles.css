@@ -106,11 +106,6 @@ input[type=text],input[type=email]{
     cursor:pointer;
 }
 
-@media (min-width:767px){
-    .center-responsive{
-	margin-left:20%;
-    }   
-}
 
 .error{
     color:#A94442;
@@ -179,4 +174,14 @@ a{
     color:#08c;
     text-decoration:none;
     border-bottom: none;
+}
+
+#ad_div,#ad_div>p{
+    font-size:12px;
+    width:100;
+    line-height:1.3em;
+}
+
+#ad_div img{
+    width:100%;
 }
